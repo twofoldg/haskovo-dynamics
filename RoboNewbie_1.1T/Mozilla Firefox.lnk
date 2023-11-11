@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>LinkProxyList</key>
+	<dict>
+		<key>Items</key>
+		<array>
+			<dict>
+				<key>Proxy</key>
+				<dict>
+					<key>Alias</key>
+					<dict>
+						<key>/* AliasPath */</key>
+						<string>/Applications/Parallels Desktop.app</string>
+						<key>AliasData</key>
+						<data>
+						AAAAAAF4AAIAAQxNYWNpbnRvc2gg
+						SEQAAAAAAAAAAAAAAAAAAADI2b7d
+						SCsAAADn3Z8VUGFyYWxsZWxzIERl
+						c2t0b3AuYXBwAAAAAAAAAAAAAAAA
+						AAAAAAAAAAAAAAAAAAAAAAAAAAAA
+						AAAAAAAAAAAAAUOWvtPA/wIAAAAA
+						AAAAAP////8AAAkgAAAAAAAAAAAA
+						AAAAAAAADEFwcGxpY2F0aW9ucwAQ
+						AAgAAMjZor0AAAARAAgAANPA4uIA
+						AAABAAQA592fAAIAME1hY2ludG9z
+						aCBIRDpBcHBsaWNhdGlvbnM6AFBh
+						cmFsbGVscyBEZXNrdG9wLmFwcAAO
+						ACwAFQBQAGEAcgBhAGwAbABlAGwA
+						cwAgAEQAZQBzAGsAdABvAHAALgBh
+						AHAAcAAPABoADABNAGEAYwBpAG4A
+						dABvAHMAaAAgAEgARAASACJBcHBs
+						aWNhdGlvbnMvUGFyYWxsZWxzIERl
+						c2t0b3AuYXBwABMAAS8A//8AAA==
+						</data>
+					</dict>
+				</dict>
+				<key>ProxyKind</key>
+				<string>Alias</string>
+			</dict>
+		</array>
+	</dict>
+	<key>LinkTarget</key>
+	<dict>
+		<key>TargetObject</key>
+		<dict>
+			<key>CommandAction</key>
+			<dict>
+				<key>CommandLine</key>
+				<string></string>
+			</dict>
+			<key>CommandActionKind</key>
+			<string>CommandLine</string>
+			<key>CommandOptions</key>
+			<dict>
+				<key>ShowCommand</key>
+				<string>Normal</string>
+			</dict>
+		</dict>
+		<key>TargetObjectKind</key>
+		<string>Command</string>
+		<key>TargetSource</key>
+		<dict>
+			<key>VmName</key>
+			<string>Windows 10</string>
+			<key>VmPath</key>
+			<string>/Users/hans-dieterburkhard/Documents/Parallels/Windows 10.pvm/config.pvs</string>
+			<key>VmUuid</key>
+			<string>{0f23232c-6834-489a-8a91-c9e467faa852}</string>
+		</dict>
+		<key>TargetSourceKind</key>
+		<string>PrlVm</string>
+	</dict>
+</dict>
+</plist>
