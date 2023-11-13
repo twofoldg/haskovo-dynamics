@@ -34,7 +34,7 @@ import org.apache.commons.math3.geometry.euclidean.threed.Vector3D;
  * 2.b) Sometimes methods polarStr(...) and cartesianStr(...) may be useful for
  * a nice output of three dimensional vector values. <br>
  * 3) Print all the logged informations at once, when your agent is finishing.
- * This should be done in the main(...)-method of the Agent_-class. <br>
+ * This should be done in the create(...)-method of the Agent_-class. <br>
  * An example of the recommended usage you can find in Agent_TestPerceptorInput.
  * A complex example with passing the Logger-object to another class than the
  * Agent_-class can be found in package examples.agentSimpleSoccer. 
@@ -124,7 +124,7 @@ public class Logger {
    * this method will cause an output starting with the very first entry made
    * after the instantiation of the Logger-object. <br>
    * This method is designed to be called just once, at the end of the
-   * main(...)-method of the Agent_-class (see comment of class Logger).
+   * create(...)-method of the Agent_-class (see comment of class Logger).
    */
   public void printLog() {
     System.out.println("Log begin");

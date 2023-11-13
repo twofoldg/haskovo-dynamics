@@ -20,7 +20,7 @@ import util.RobotConsts;
  */
 public class Agent_BasicStructure {
 
-  public static void main(String args[]) {
+  public static void create() {
     
     // Change here the class to the name of your own agent file 
     // - otherwise Java will always execute the Agent_BasicStructure.

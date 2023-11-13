@@ -82,7 +82,7 @@ public class Agent_SoccerTeam {
    You can use a number between 1 and 11 instead to start a player with that 
    identity.
    */
-  final String id = "0";
+  final String id = "3";
   final String team = "SoccerTeam";
   
   /** If the player id is set to "0",the "beam"-coordinates given below are
@@ -101,7 +101,7 @@ public class Agent_SoccerTeam {
     ServerCommunication sc;
     PlayMode pm;
 
-    private static enum AfterGoalState {STOP_MOTION,START_INIT_POSE,INIT_POSE, BEAM, FINISHED};
+    public static enum AfterGoalState {STOP_MOTION,START_INIT_POSE,INIT_POSE, BEAM, FINISHED};
     private static AfterGoalState afterGoalState = AfterGoalState.STOP_MOTION;
 
     /**

@@ -137,18 +137,11 @@ public class SoccerTeamThinking {
          * be changed accordingly.
          */
         switch (playerNumber) {
-            case "1":
-                role1 = new SimpleGoalie(motion, percIn, log);
-                break;
-            case "2":
-                role2 = new SimpleAttacker(motion, percIn, log);
-                break;
-            case "3":
-                role3 = new SimpleSoccer(motion, percIn, log);
-                break;
-            case "4":
-                role4 = new SimpleSoccer_withKick(motion, percIn, log);
-                break;
+            case "1" -> role1 = new SimpleGoalie(motion, percIn, log);
+            case "2" -> role2 = new SimpleAttacker(motion, percIn, log);
+            case "3" -> role3 = new SimpleSoccer(motion, percIn, log);
+            case "4" -> role4 = new SimpleSoccer_withKick(motion, percIn, log);
+
 
             /**
              * // case "5": break; // case "6": break; // case "7": break; //
@@ -158,8 +151,7 @@ public class SoccerTeamThinking {
              *
              *
              */
-            default:
-                role_d = new SimpleSoccer(motion, percIn, log);
+            default -> role_d = new SimpleSoccer(motion, percIn, log);
         }
     }
 

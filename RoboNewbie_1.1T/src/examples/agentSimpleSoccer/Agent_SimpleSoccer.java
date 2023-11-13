@@ -162,22 +162,21 @@ public class Agent_SimpleSoccer {
   }
   
   /**
-   * Move the robot hardware, that means send effector commands to the server. 
+   * Move the robot hardware, that means send effector commands to the server.
    */
   private void act(){
     // Calculate effector commands and send them to the server, this method
-    // of class KeyframeMotion has to be called in every server cycle. 
-    kfMotion.executeKeyframeSequence();
-    lookAround.look(); // No matter, which move the robot executes, it should
-                       // always turn its head around. So the LookAroundMotion
-                       // is called after the KeyframeMotion, to overwrite the 
-                       // commands for the head. 
+    // of class KeyframeMotion has to be called in every server cycle.
+    kfMotion.executeKeyframeSequence(); // No matter, which move the robot executes, it should
+    // always turn its head around. So the LookAroundMotion
+    // is called after the KeyframeMotion, to overwrite the
+    // commands for the head.
     // Send agent message with effector commands to the server.
     effOut.sendAgentMessage();
   }
 
   /**
-   * Print log informations - if there where any. 
+   * Print log informations - if there where any.
    */
   private void printlog() {
     log.printLog();

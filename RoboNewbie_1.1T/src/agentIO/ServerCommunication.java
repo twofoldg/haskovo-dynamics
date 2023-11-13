@@ -46,7 +46,7 @@ import util.BeamPoses;
  * <p/>
  * This class realises the sending and receiving of SimSpark messages.
  * <p/>
- * During every cycle of the main agent loop the actual server message has to be
+ * During every cycle of the create agent loop the actual server message has to be
  * read by calling the method getServerMessage(). This synchronizes the agent
  * with the server, and should be done by an object of class PerceptorInput. So
  * the call stack would be:<br>
@@ -54,7 +54,7 @@ import util.BeamPoses;
  * -> PerceptorInput.update() <br>
  * -> ServerConnection.getServerMessage()
  * <p/>
- * With sendMessage() an agent message can be sent. Also once during the main
+ * With sendMessage() an agent message can be sent. Also once during the create
  * agent loop, this should be done by class EffectorOutput. Call stack: <br>
  * Agent_-class.act() <br>
  * -> EffectorOutput.sendAgentMessage(); <br>
