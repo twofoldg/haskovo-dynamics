@@ -21,7 +21,6 @@ import examples.agentSoccerTeam.SimpleSoccer_withKick;
 import examples.agentSoccerTeam.SoccerTeamThinking;
 import keyframeMotion.KeyframeMotion;
 import localFieldView.LocalFieldView;
-import util.GameStateConsts;
 import util.Logger;
 
 import static util.GameStateConsts.*;
@@ -82,10 +81,9 @@ public class AttackerAgent {
   private void init() {
 
     sc = new ServerCommunication();
-
-    log = new Logger();
     sc.initRobot(id, team, beamX, beamY, beamRot);
 
+    log = new Logger();
     String agentNumber = sc.finalRobotID;
     percIn = new PerceptorInput(sc);
     effOut = new EffectorOutput(sc);

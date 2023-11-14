@@ -14,6 +14,9 @@ import agentIO.ServerCommunication;
 import directMotion.LookAroundMotion;
 import java.io.IOException;
 import java.util.logging.Level;
+
+import examples.agentSoccerTeam.SimpleGoalie;
+import examples.agentSoccerTeam.SoccerTeamThinking;
 import keyframeMotion.KeyframeMotion;
 import localFieldView.LocalFieldView;
 import util.Logger;
@@ -38,7 +41,7 @@ public class GoalKeeperAgent {
   private EffectorOutput effOut;
   private KeyframeMotion kfMotion;
   private LocalFieldView localView;
-  private GoalKeeperThinking goalKeeperThinking;
+  private SoccerTeamThinking goalKeeperThinking;
   private LookAroundMotion lookAround;
 
   /** A player is identified in the server by its player ID and its team name.
@@ -64,10 +67,13 @@ public class GoalKeeperAgent {
    * their relations to each other, and create the robot at a specified position
    * on the field.
    */
+
+  private SimpleGoalie goaltender;
+
   private void init() {
 
-
     ServerCommunication sc = new ServerCommunication();
+    sc.initRobot(id, team, beamX, beamY, beamRot);
 
     log = new Logger();
     percIn = new PerceptorInput(sc);
@@ -76,10 +82,8 @@ public class GoalKeeperAgent {
     localView = new LocalFieldView(percIn, log, team, id);
     lookAround = new LookAroundMotion(percIn, effOut, log);
 
-    goalKeeperThinking = new GoalKeeperThinking(percIn, localView, kfMotion, log);
-
-    sc.initRobot(id, team, beamX, beamY, beamRot);
-
+    goalKeeperThinking = new SoccerTeamThinking(percIn, localView, kfMotion, log, sc);
+    goaltender = new SimpleGoalie(kfMotion, percIn, log);
   }
 
 
@@ -136,7 +140,7 @@ public class GoalKeeperAgent {
    * the next movement - it will be realized in act().
    */
   private void think(){
-    goalKeeperThinking.decide();
+    goaltender.decide();
   }
 
   /**
